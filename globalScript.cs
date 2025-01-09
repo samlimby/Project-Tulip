@@ -6,3 +6,4 @@ public partial class globalScript : Node
 	public int Score { get; set; } = 0;
 }
 
+// testing 
