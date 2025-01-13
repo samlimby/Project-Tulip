@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgh4davatgojx"]
+[gd_scene load_steps=3 format=3 uid="uid://blcpn56n7ko23"]
 
-[ext_resource type="Script" path="res://scenes/startButton.cs" id="1_ojhh0"]
+[ext_resource type="Script" path="res://scripts/startButton.gd" id="1_0ovw5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybw1v"]
 bg_color = Color(0.950624, 0.403145, 0.3045, 1)
@@ -46,4 +46,4 @@ offset_bottom = 546.0
 theme_type_variation = &"FlatButton"
 theme_override_styles/normal = SubResource("StyleBoxFlat_ybw1v")
 text = "Start demo"
-script = ExtResource("1_ojhh0")
+script = ExtResource("1_0ovw5")

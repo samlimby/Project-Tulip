@@ -11,11 +11,12 @@ config_version=5
 [application]
 
 config/name="Project Solar"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 
 [autoload]
 
-Global="*res://scripts/globalScript.cs"
+gameManager="*res://scripts/gameManager.gd"
 
 [display]
 
@@ -26,3 +27,7 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="Project Tulip"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/block_code/plugin.cfg")
