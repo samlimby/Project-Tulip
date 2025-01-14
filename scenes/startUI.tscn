@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://blcpn56n7ko23"]
+[gd_scene load_steps=5 format=3 uid="uid://blcpn56n7ko23"]
 
 [ext_resource type="Script" path="res://scripts/startButton.gd" id="1_0ovw5"]
 
+[sub_resource type="SystemFont" id="SystemFont_3xft4"]
+font_names = PackedStringArray("monogram")
+
+[sub_resource type="SystemFont" id="SystemFont_2kjjs"]
+font_names = PackedStringArray("monogram")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybw1v"]
-bg_color = Color(0.950624, 0.403145, 0.3045, 1)
+bg_color = Color(0.65098, 0.65098, 0.65098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="StartUi" type="Control"]
 layout_mode = 3
@@ -20,30 +30,35 @@ offset_bottom = 800.0
 color = Color(0.109341, 0.109341, 0.109341, 1)
 
 [node name="title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 529.0
-offset_top = 231.0
-offset_right = 773.0
-offset_bottom = 286.0
-theme_override_font_sizes/font_size = 40
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -195.0
+offset_top = 240.0
+offset_right = 195.0
+offset_bottom = 304.0
+grow_horizontal = 2
+theme_override_fonts/font = SubResource("SystemFont_3xft4")
+theme_override_font_sizes/font_size = 80
 text = "Project Solar"
 
-[node name="title2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 755.0
-offset_right = 321.0
-offset_bottom = 778.0
-theme_override_font_sizes/font_size = 16
-text = "pre-alpha v0.01. Sam Limby production"
-
 [node name="startButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 551.0
-offset_top = 495.0
-offset_right = 738.0
-offset_bottom = 546.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.5
+offset_top = -25.5
+offset_right = 93.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_type_variation = &"FlatButton"
+theme_override_fonts/font = SubResource("SystemFont_2kjjs")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_ybw1v")
 text = "Start demo"
 script = ExtResource("1_0ovw5")

@@ -1,0 +1,222 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfa8xuxseg61t"]
+
+[sub_resource type="SystemFont" id="SystemFont_1rbp6"]
+font_names = PackedStringArray("monogram")
+
+[sub_resource type="SystemFont" id="SystemFont_of6tl"]
+font_names = PackedStringArray("monogram")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16jyp"]
+bg_color = Color(0.259294, 0.259294, 0.259294, 1)
+border_color = Color(0.321728, 0.321728, 0.321728, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2f5h"]
+border_color = Color(0, 0.955517, 0.472866, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="SystemFont" id="SystemFont_ibt46"]
+font_names = PackedStringArray("monogram")
+
+[node name="gameSetup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="page-title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 250.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_1rbp6")
+theme_override_font_sizes/font_size = 56
+text = "Game Setup"
+
+[node name="main-button" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+offset_left = 1115.0
+offset_top = 39.0
+offset_right = 1241.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_of6tl")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_16jyp")
+text = "Start Game"
+
+[node name="planet-option1" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 113.0
+offset_right = 429.0
+offset_bottom = 769.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2f5h")
+
+[node name="planet-img" type="Panel" parent="planet-option1"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 375.0
+offset_bottom = 323.0
+
+[node name="planet1-title" type="Label" parent="planet-option1"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 339.0
+offset_right = 370.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ibt46")
+theme_override_font_sizes/font_size = 32
+text = "Helios Frontier Enterprises"
+autowrap_mode = 3
+
+[node name="planet1-description" type="Label" parent="planet-option1"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 375.0
+offset_right = 370.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ibt46")
+theme_override_font_sizes/font_size = 24
+text = "text related to the planet that is being featured here and on the specific resources and lore related to it"
+autowrap_mode = 2
+
+[node name="planet1-selection_button" type="Button" parent="planet-option1"]
+clip_contents = true
+layout_mode = 1
+offset_left = 25.0
+offset_top = 595.0
+offset_right = 368.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_of6tl")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_16jyp")
+text = "Select Colony Adminstration"
+
+[node name="planet-option2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 111.0
+offset_right = 845.0
+offset_bottom = 767.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2f5h")
+
+[node name="planet-img" type="Panel" parent="planet-option2"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 375.0
+offset_bottom = 323.0
+
+[node name="planet1-title" type="Label" parent="planet-option2"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 339.0
+offset_right = 370.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ibt46")
+theme_override_font_sizes/font_size = 32
+text = "Covenant of Stellar Genesis"
+autowrap_mode = 3
+
+[node name="planet1-description" type="Label" parent="planet-option2"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 375.0
+offset_right = 370.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ibt46")
+theme_override_font_sizes/font_size = 24
+text = "text related to the planet that is being featured here and on the specific resources and lore related to it"
+autowrap_mode = 2
+
+[node name="planet1-selection_button" type="Button" parent="planet-option2"]
+clip_contents = true
+layout_mode = 1
+offset_left = 25.0
+offset_top = 595.0
+offset_right = 368.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_of6tl")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_16jyp")
+text = "Select Colony Adminstration"
+
+[node name="planet-option3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 110.0
+offset_right = 1253.0
+offset_bottom = 766.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2f5h")
+
+[node name="planet-img" type="Panel" parent="planet-option3"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 375.0
+offset_bottom = 323.0
+
+[node name="planet3-title" type="Label" parent="planet-option3"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 339.0
+offset_right = 370.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ibt46")
+theme_override_font_sizes/font_size = 32
+text = "United Earth Colonial Administration"
+autowrap_mode = 3
+
+[node name="planet3-description" type="Label" parent="planet-option3"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 403.0
+offset_right = 369.0
+offset_bottom = 488.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ibt46")
+theme_override_font_sizes/font_size = 24
+text = "text related to the planet that is being featured here and on the specific resources and lore related to it"
+autowrap_mode = 2
+
+[node name="planet3-selection_button" type="Button" parent="planet-option3"]
+clip_contents = true
+layout_mode = 1
+offset_left = 25.0
+offset_top = 595.0
+offset_right = 368.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_of6tl")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_16jyp")
+text = "Select Colony Adminstration
+"
