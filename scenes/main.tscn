@@ -1,8 +1,9 @@
 [gd_scene load_steps=7 format=4 uid="uid://tss7b3fv7n0m"]
 
 [ext_resource type="Texture2D" uid="uid://cl2rxekluf7f" path="res://art/prototype-tiles.png" id="1_cqmou"]
-[ext_resource type="Script" path="res://scripts/testButton.gd" id="2_lfcfj"]
+[ext_resource type="Script" path="res://scripts/mainTile.gd" id="1_dnwgd"]
 [ext_resource type="Script" path="res://scripts/testText.gd" id="3_7ha0q"]
+[ext_resource type="PackedScene" uid="uid://bhsq1s7vs0lre" path="res://items/test1.tscn" id="5_fern3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4kgh"]
 texture = ExtResource("1_cqmou")
@@ -19,22 +20,8 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/2 = SubResource("TileSetAtlasSource_w4kgh")
 
-[sub_resource type="GDScript" id="GDScript_xvjw4"]
-script/source = "extends Node
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	print(\"hello world\")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-	"
-
 [node name="main" type="Node2D"]
+script = ExtResource("1_dnwgd")
 
 [node name="bg" type="ColorRect" parent="."]
 offset_right = 1280.0
@@ -56,7 +43,6 @@ offset_bottom = 755.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "click here for success!"
-script = ExtResource("2_lfcfj")
 
 [node name="text" type="Label" parent="."]
 modulate = Color(1, 0.317647, 1, 1)
@@ -67,11 +53,6 @@ offset_bottom = 38.0
 text = "k"
 script = ExtResource("3_7ha0q")
 
-[node name="MapItem" type="Node2D" parent="."]
-script = SubResource("GDScript_xvjw4")
-
-[node name="ColorRect" type="ColorRect" parent="MapItem"]
-offset_left = 308.0
-offset_top = 716.0
-offset_right = 340.0
-offset_bottom = 748.0
+[node name="test-item" parent="." instance=ExtResource("5_fern3")]
+y_sort_enabled = true
+position = Vector2(993, 669)
