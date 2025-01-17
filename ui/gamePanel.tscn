@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://pbejuwkrljhm"]
+
+[ext_resource type="Script" path="res://scripts/buildButton.gd" id="1_iccm5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5y66t"]
+
+[node name="GamePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="topbar-container" type="MarginContainer" parent="Container"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.510938
+offset_bottom = 176.0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Container/topbar-container"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5y66t")
+
+[node name="topbar-container2" type="MarginContainer" parent="Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -535.0
+offset_bottom = 176.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="Container/topbar-container2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5y66t")
+
+[node name="buildButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -60.0
+offset_right = 37.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Build"
+script = ExtResource("1_iccm5")

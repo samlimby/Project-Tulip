@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 [autoload]
 
 gameManager="*res://scripts/gameManager.gd"
+gamePanelUI="*res://ui/gamePanel.tscn"
 
 [display]
 
@@ -31,3 +32,7 @@ project/assembly_name="Project Tulip"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/block_code/plugin.cfg")
+
+[gui]
+
+theme/custom_font="res://font/Monogram Font.ttf"
