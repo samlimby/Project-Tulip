@@ -88,23 +88,24 @@ func create_building_sprite(building_type: String):
 
 func _process(_delta):
     if is_placing and current_building_sprite:
-        # Get the mouse position in local coordinates
+        # Convert mouse position to tilemap coordinates
         var local_mouse_pos = gameManager.tilemap.to_local(get_global_mouse_position())
-        
-        # Convert to tile coordinates
         var mouse_tile = gameManager.tilemap.local_to_map(local_mouse_pos)
         
-        # Apply the offset
-        mouse_tile = Vector2i(mouse_tile.x + int(customOffset.x), mouse_tile.y + int(customOffset.y))
-        
-        # Convert back to world position
+        print("Mouse Tile Coordinates:", mouse_tile)
+
+        # Retrieve tile data
+        var tile_data = gameManager.tilemap.get_cell_tile_data(mouse_tile)  # No layer index needed
+        if tile_data:
+            print("Tile Data:", tile_data)
+        else:
+            print("No tile found at:", mouse_tile)
+
+        # Update the building sprite's position
         var world_pos = gameManager.tilemap.map_to_local(mouse_tile)
-        
-        # Add the half-tile offset to center on the tile
-        var tile_size = gameManager.tilemap.tile_set.tile_size
-        world_pos += Vector2(tile_size.x, tile_size.y)
-        
         current_building_sprite.global_position = world_pos
+
+
 
 func _input(event):
     # Handle clicking outside popup
