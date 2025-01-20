@@ -1,5 +1,11 @@
-extends Node2D
+extends Button
+
+@onready var foundationTiles: TileMapLayer = $"prototype-tile"
+@onready var buildingTiles: TileMapLayer = $"building-tile"
 
 func _ready():
-    gameManager.tilemap = $"prototype-tile"
-    gameManager.overlay_tilemap = $"prototype-tile_overlay"
+    pass
+
+func _input(_event):
+    if Input.is_action_just_pressed("left-click"):
+        print("left mouse clicked")
